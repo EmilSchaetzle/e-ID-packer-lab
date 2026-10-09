@@ -1,0 +1,59 @@
+{
+  "vct": "urn:vct:wololo.viscon",
+  "name": "VIScon-ID vct-metadata",
+  "description": "vct-metadata for the VC of the VIScon workshop",
+  "schema_uri": "${external-url}/oid4vci/json-schema/my-schema-v01",
+  "schema_uri#integrity": "sha256-EQzON0wGc4JaNWjvTabyZA6uSg5hd2X8WaQfbFdfKms=",
+  "display": [
+    {
+      "lang": "de-CH",
+      "name": "VIScon-ID",
+      "rendering": {
+        "oca": {
+          "uri": "${external-url}/oid4vci/oca/my-overlay-v01",
+          "uri#integrity": "sha256-mZVY/2gnijQxKG3WQNalEWZWlmg5TUHGOV5+wzwlJmE="
+        }
+      }
+    },
+    {
+      "lang": "fr-CH",
+      "name": "VIScon-ID Credential",
+      "rendering": {
+        "oca": {
+          "uri": "${external-url}/oid4vci/oca/my-overlay-v01",
+          "uri#integrity": "sha256-mZVY/2gnijQxKG3WQNalEWZWlmg5TUHGOV5+wzwlJmE="
+        }
+      }
+    },
+    {
+      "lang": "it-CH",
+      "name": "VIScon-ID Credential",
+      "rendering": {
+        "oca": {
+          "uri": "${external-url}/oid4vci/oca/my-overlay-v01",
+          "uri#integrity": "sha256-mZVY/2gnijQxKG3WQNalEWZWlmg5TUHGOV5+wzwlJmE="
+        }
+      }
+    },
+    {
+      "lang": "rm-CH",
+      "name": "VIScon-ID Credential",
+      "rendering": {
+        "oca": {
+          "uri": "${external-url}/oid4vci/oca/my-overlay-v01",
+          "uri#integrity": "sha256-mZVY/2gnijQxKG3WQNalEWZWlmg5TUHGOV5+wzwlJmE="
+        }
+      }
+    },
+    {
+      "lang": "en-GB",
+      "name": "VIScon-ID Credential",
+      "rendering": {
+        "oca": {
+          "uri": "${external-url}/oid4vci/oca/my-overlay-v01",
+          "uri#integrity": "sha256-mZVY/2gnijQxKG3WQNalEWZWlmg5TUHGOV5+wzwlJmE="
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+    "chat.commandCenter.enabled": false,
+    "chat.disableAIFeatures": true,
+    "chat.extensionTools.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "json.schemaDownload.enable": false,
+    "telemetry.feedback.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.shellIntegration.history": 0,
+    "update.mode": "none",
+    "update.showReleaseNotes": false,
+    "workbench.enableExperiments": false,
+    "workbench.localHistory.enabled": false,
+    "workbench.remoteIndicator.showExtensionRecommendations": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.welcomePage.walkthroughs.openOnInstall": false
+}

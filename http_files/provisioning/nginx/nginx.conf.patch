@@ -1,0 +1,13 @@
+-- /etc/nginx/nginx.OLD.conf	2025-12-17 11:40:23.884272392 +0100
++++ /etc/nginx/nginx.conf	2025-12-17 11:40:44.790575943 +0100
+@@ -31,8 +31,8 @@
+ 	# SSL Settings
+ 	##
+ 
+-	ssl_protocols TLSv1.2 TLSv1.3; # Dropping SSLv3 (POODLE), TLS 1.0, 1.1
+-	ssl_prefer_server_ciphers off; # Don't force server cipher order.
++	#ssl_protocols TLSv1.2 TLSv1.3; # Dropping SSLv3 (POODLE), TLS 1.0, 1.1
++	#ssl_prefer_server_ciphers off; # Don't force server cipher order.
+ 
+ 	##
+ 	# Logging Settings

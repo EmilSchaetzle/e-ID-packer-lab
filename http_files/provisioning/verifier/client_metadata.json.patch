@@ -1,0 +1,25 @@
+diff --git a/verifier-application/src/main/resources/client_metadata.json b/verifier-application/src/main/resources/client_metadata.json
+index 3e34986e..32c5a774 100644
+--- a/verifier-application/src/main/resources/client_metadata.json
++++ b/verifier-application/src/main/resources/client_metadata.json
+@@ -1,13 +1,12 @@
+ {
+   "client_id": "${VERIFIER_DID}",
+-  "client_name#en": "English name (all regions)",
+-  "client_name#fr": "French name (all regions)",
+-  "client_name#de-DE": "German name (region Germany)",
+-  "client_name#de-CH": "German name (region Switzerland)",
+-  "client_name#de": "German name (fallback)",
+-  "client_name": "Fallback name",
+-  "logo_uri": "www.example.com/logo.png",
+-  "logo_uri#fr": "www.example.com/logo_fr.png",
++  "client_name#en": "VIScon Workshop verifier in English",
++  "client_name#fr": "VIScon Workshop verifier en français",
++  "client_name#de-DE": "VIScon Workshop verifier auf Deutsch",
++  "client_name#de-CH": "VIScon Workshop verifier uf Düütsch",
++  "client_name#de": "VIScon Workshop verifier uf richtig Düütsch",
++  "client_name": "VIScon Workshop verifier - fallback",
++  "logo_uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAPFJREFUaN7t2NEOgyAMhWEhvteenSfDiyVLFrdZekqZyd87F1f5EBBaeu/bnaNuNw8AAAAAAAAAAAAhduN9j/J22bQdYGC26njex1/crRezMQcAADDEeZVQ1o3YbIUzMQAAAAAAAAAAAIC/P9Qbj7AtfWtr3U4PnbszGdcAd8kgh3EBUAoedoNSJpo7iS1+sUxU53X/K8mPPPojkpbRkL6YArCP1/OrCFHteqOfl8bWhL+KGtXlrS/4isXPgRDD4mVUNIz+fexDNpTdMdwd+LmlxYQdVEZt1MJwD7y84u43hjhnqE4DAAAAAAAAAAAAWBcH1oxTH9Y+w8sAAAAASUVORK5CYII=",
+   "vp_formats": {
+     "jwt_vp": {
+       "alg": [

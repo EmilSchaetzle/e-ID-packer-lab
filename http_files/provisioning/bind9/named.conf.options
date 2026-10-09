@@ -1,0 +1,14 @@
+tls google {
+        remote-hostname "dns.google";
+};
+
+options {
+        directory "/var/cache/bind";
+
+        // https://wiki.archlinux.org/title/BIND#Set_up_DNS_forwarding
+        forward only;
+        forwarders port 853 tls google {
+                8.8.8.8; 2001:4860:4860::8888;
+                8.8.4.4; 2001:4860:4860::8844;
+        };
+};

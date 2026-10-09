@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "vct": {
+      "type": "string"
+    },
+    "vct_metadata_uri": {
+      "type": "string"
+    },
+    "vct_metadata_uri#integrity": {
+      "type": "string"
+    },
+    "iss": {
+      "type": "string"
+    },
+    "sub": {
+      "type": "string"
+    },
+    "nbf": {
+      "type": "number"
+    },
+    "exp": {
+      "type": "number"
+    },
+    "cnf": {
+      "type": "object"
+    },
+    "iat": {
+      "type": "number"
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+        "status_list": {
+          "type": "object",
+          "properties": {
+            "uri": {
+              "type": "string"
+            },
+            "idx": {
+              "type": "number"
+            },
+            "type": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "document_number": {
+      "type": "string"
+    },
+    "reference_id_type": {
+      "type": "string"
+    },
+    "issuing_country": {
+      "type": "string"
+    },
+    "given_name": {
+      "type": "string"
+    },
+    "verification_type": {
+      "type": "string"
+    },
+    "issuance_date": {
+      "type": "string"
+    },
+    "expiry_date": {
+      "type": "string"
+    },
+    "age_birth_year": {
+      "type": "string"
+    },
+    "age_over_18": {
+      "type": "string"
+    },
+    "reference_id_expiry_date": {
+      "type": "string"
+    },
+    "birth_place": {
+      "type": "string"
+    },
+    "place_of_origin": {
+      "type": "string"
+    },
+    "issuing_authority": {
+      "type": "string"
+    },
+    "portrait": {
+      "type": "string",
+      "contentEncoding": "base64",
+      "contentMediaType": "image/jpeg"
+    },
+    "age_over_65": {
+      "type": "string"
+    },
+    "verification_organization": {
+      "type": "string"
+    },
+    "personal_administrative_number": {
+      "type": "string"
+    },
+    "birth_date": {
+      "type": "string"
+    },
+    "age_over_16": {
+      "type": "string"
+    },
+    "sex": {
+      "type": "string"
+    },
+    "family_name": {
+      "type": "string"
+    },
+    "additional_person_info": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "vct",
+    "vct_metadata_uri",
+    "vct_metadata_uri#integrity",
+    "iss",
+    "cnf",
+    "iat",
+    "family_name",
+    "given_name"
+  ]
+}

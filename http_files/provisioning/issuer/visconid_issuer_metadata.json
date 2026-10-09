@@ -1,0 +1,735 @@
+{
+  "credential_issuer": "${external-url}",
+  "credential_endpoint": "${external-url}/oid4vci/api/credential",
+  "deferred_credential_endpoint": "${external-url}/oid4vci/api/deferred_credential",
+  "nonce_endpoint": "${external-url}/oid4vci/api/nonce",
+  "display": [
+    {
+      "name": "VIScon Workshop uf Düütsch",
+      "locale": "de-CH",
+      "logo": {
+        "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABxVBMVEUAAAAAr+/7nhDCAIr//wD7nRH45g/+bREAr+8Ar+8Ar+8Ar+8Ar/AArvQAr+8Ar/EuucWn0Vml0Vul0Vum0VoruMoAr+8AsPPV5C7+6Qn96Qr96Qr96Ar85Azk3iMDr+4Ar+8AsfBDesrRDnXJFHrJE3rIDn3ssir85A1zxokArvIAr+8AsPAMpunEEX/IDX7HC3/IDX3IDn3IDn3IDn3HC3756A3y4RUKseYAr/AAr+8AsvGGRKPLC3zfT0z6mRTsczG/AJDIDn3IDn3IDH745g/74w4xs8YAr+8AsPAbmeDKDHzIDX78oA77nRH7nhD12Bb34hH41RH/mw0mrM0Ar/H8oA/7nRH7nRH45w734hH35BH7nRH9nQ8irdHKCnzlYD/7nhD7nRH34xH34hH34xH5xRH/nA6oo1sAr/PEEX/IC3/8nxD7nRH5vhH34xH34hH34xH8mxD2nRUPruNdZbvLCnzVNGH8nw/7nhH34hH34hH6rBH/nA10p4kCru65G4bMB339lhH+nQ7/mw3/mw3/nA3nniMAsPAkk9t9Sqg6lcmapWeoo1qoo1uoo1osrMoAsPAAsvEAr/AAr/MAr/T///9p4zBBAAAAlnRSTlMAAAAAAAAAAAQXGkrFvBO3kYeNjoaOb69SoKGgn8aYtCTFaFhcXE87xYHEAoyiqsGmqquq02J6rKCMRMSEvDBCCwMBRlF/ozfHvpC9XYOdBDLIRXKTvoShBQaehly7kLs5xEsBTMQ5u4TErXhptR+K1Gd4raKBxTy0bD5QO8WBtJqRTNGkn8aYt492PnmOjoaOxb3AvbwcfiH4AAAAAWJLR0SWkWkrOQAAAAd0SU1FB+gEBw0gEjBxa48AAADoSURBVBjTY2BgYOTg5AIDTg5GBiBgZOTm4QUDHm5GkAgjH7+AoJCQkLCIKD8fI0iBmLiEpJS0tIysnLwYUAmjgqKSsoqqqqqauoamlgIjg7aOrp6+gaGRsYmpmbmFpTaDlbWNrZ29g6OTs4urm7uHFYOnl7ePr58/EzNLQGBQcEgoWCAsPIKVLTIqOiY2LhSkJT4hMYk9OSU1LT0j0wpkaFZ2Tm5efkFhUXEJ0FBGBevSsvKKyqrqmtq6TKC1QIfVNzQ2Nbe0trWDHQZ0ekdnV3dPb1//BLDTQZ6bOGnylKlTp0I9h+Z9AOtbM/W05gEGAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTA0LTA3VDEzOjMyOjE4KzAwOjAwBjt1GAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0wNC0wN1QxMzozMjoxOCswMDowMHdmzaQAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII="
+      }
+    },
+    {
+      "name": "VIScon Workshop en français",
+      "locale": "fr-CH",
+      "logo": {
+        "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABxVBMVEUAAAAAr+/7nhDCAIr//wD7nRH45g/+bREAr+8Ar+8Ar+8Ar+8Ar/AArvQAr+8Ar/EuucWn0Vml0Vul0Vum0VoruMoAr+8AsPPV5C7+6Qn96Qr96Qr96Ar85Azk3iMDr+4Ar+8AsfBDesrRDnXJFHrJE3rIDn3ssir85A1zxokArvIAr+8AsPAMpunEEX/IDX7HC3/IDX3IDn3IDn3IDn3HC3756A3y4RUKseYAr/AAr+8AsvGGRKPLC3zfT0z6mRTsczG/AJDIDn3IDn3IDH745g/74w4xs8YAr+8AsPAbmeDKDHzIDX78oA77nRH7nhD12Bb34hH41RH/mw0mrM0Ar/H8oA/7nRH7nRH45w734hH35BH7nRH9nQ8irdHKCnzlYD/7nhD7nRH34xH34hH34xH5xRH/nA6oo1sAr/PEEX/IC3/8nxD7nRH5vhH34xH34hH34xH8mxD2nRUPruNdZbvLCnzVNGH8nw/7nhH34hH34hH6rBH/nA10p4kCru65G4bMB339lhH+nQ7/mw3/mw3/nA3nniMAsPAkk9t9Sqg6lcmapWeoo1qoo1uoo1osrMoAsPAAsvEAr/AAr/MAr/T///9p4zBBAAAAlnRSTlMAAAAAAAAAAAQXGkrFvBO3kYeNjoaOb69SoKGgn8aYtCTFaFhcXE87xYHEAoyiqsGmqquq02J6rKCMRMSEvDBCCwMBRlF/ozfHvpC9XYOdBDLIRXKTvoShBQaehly7kLs5xEsBTMQ5u4TErXhptR+K1Gd4raKBxTy0bD5QO8WBtJqRTNGkn8aYt492PnmOjoaOxb3AvbwcfiH4AAAAAWJLR0SWkWkrOQAAAAd0SU1FB+gEBw0gEjBxa48AAADoSURBVBjTY2BgYOTg5AIDTg5GBiBgZOTm4QUDHm5GkAgjH7+AoJCQkLCIKD8fI0iBmLiEpJS0tIysnLwYUAmjgqKSsoqqqqqauoamlgIjg7aOrp6+gaGRsYmpmbmFpTaDlbWNrZ29g6OTs4urm7uHFYOnl7ePr58/EzNLQGBQcEgoWCAsPIKVLTIqOiY2LhSkJT4hMYk9OSU1LT0j0wpkaFZ2Tm5efkFhUXEJ0FBGBevSsvKKyqrqmtq6TKC1QIfVNzQ2Nbe0trWDHQZ0ekdnV3dPb1//BLDTQZ6bOGnylKlTp0I9h+Z9AOtbM/W05gEGAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTA0LTA3VDEzOjMyOjE4KzAwOjAwBjt1GAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0wNC0wN1QxMzozMjoxOCswMDowMHdmzaQAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII="
+      }
+    },
+    {
+      "name": "VIScon Workshop en italiano",
+      "locale": "it-CH",
+      "logo": {
+        "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABxVBMVEUAAAAAr+/7nhDCAIr//wD7nRH45g/+bREAr+8Ar+8Ar+8Ar+8Ar/AArvQAr+8Ar/EuucWn0Vml0Vul0Vum0VoruMoAr+8AsPPV5C7+6Qn96Qr96Qr96Ar85Azk3iMDr+4Ar+8AsfBDesrRDnXJFHrJE3rIDn3ssir85A1zxokArvIAr+8AsPAMpunEEX/IDX7HC3/IDX3IDn3IDn3IDn3HC3756A3y4RUKseYAr/AAr+8AsvGGRKPLC3zfT0z6mRTsczG/AJDIDn3IDn3IDH745g/74w4xs8YAr+8AsPAbmeDKDHzIDX78oA77nRH7nhD12Bb34hH41RH/mw0mrM0Ar/H8oA/7nRH7nRH45w734hH35BH7nRH9nQ8irdHKCnzlYD/7nhD7nRH34xH34hH34xH5xRH/nA6oo1sAr/PEEX/IC3/8nxD7nRH5vhH34xH34hH34xH8mxD2nRUPruNdZbvLCnzVNGH8nw/7nhH34hH34hH6rBH/nA10p4kCru65G4bMB339lhH+nQ7/mw3/mw3/nA3nniMAsPAkk9t9Sqg6lcmapWeoo1qoo1uoo1osrMoAsPAAsvEAr/AAr/MAr/T///9p4zBBAAAAlnRSTlMAAAAAAAAAAAQXGkrFvBO3kYeNjoaOb69SoKGgn8aYtCTFaFhcXE87xYHEAoyiqsGmqquq02J6rKCMRMSEvDBCCwMBRlF/ozfHvpC9XYOdBDLIRXKTvoShBQaehly7kLs5xEsBTMQ5u4TErXhptR+K1Gd4raKBxTy0bD5QO8WBtJqRTNGkn8aYt492PnmOjoaOxb3AvbwcfiH4AAAAAWJLR0SWkWkrOQAAAAd0SU1FB+gEBw0gEjBxa48AAADoSURBVBjTY2BgYOTg5AIDTg5GBiBgZOTm4QUDHm5GkAgjH7+AoJCQkLCIKD8fI0iBmLiEpJS0tIysnLwYUAmjgqKSsoqqqqqauoamlgIjg7aOrp6+gaGRsYmpmbmFpTaDlbWNrZ29g6OTs4urm7uHFYOnl7ePr58/EzNLQGBQcEgoWCAsPIKVLTIqOiY2LhSkJT4hMYk9OSU1LT0j0wpkaFZ2Tm5efkFhUXEJ0FBGBevSsvKKyqrqmtq6TKC1QIfVNzQ2Nbe0trWDHQZ0ekdnV3dPb1//BLDTQZ6bOGnylKlTp0I9h+Z9AOtbM/W05gEGAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTA0LTA3VDEzOjMyOjE4KzAwOjAwBjt1GAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0wNC0wN1QxMzozMjoxOCswMDowMHdmzaQAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII="
+      }
+    },
+    {
+      "name": "VIScon Workshop en Rumantsch",
+      "locale": "rm-CH",
+      "logo": {
+        "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABxVBMVEUAAAAAr+/7nhDCAIr//wD7nRH45g/+bREAr+8Ar+8Ar+8Ar+8Ar/AArvQAr+8Ar/EuucWn0Vml0Vul0Vum0VoruMoAr+8AsPPV5C7+6Qn96Qr96Qr96Ar85Azk3iMDr+4Ar+8AsfBDesrRDnXJFHrJE3rIDn3ssir85A1zxokArvIAr+8AsPAMpunEEX/IDX7HC3/IDX3IDn3IDn3IDn3HC3756A3y4RUKseYAr/AAr+8AsvGGRKPLC3zfT0z6mRTsczG/AJDIDn3IDn3IDH745g/74w4xs8YAr+8AsPAbmeDKDHzIDX78oA77nRH7nhD12Bb34hH41RH/mw0mrM0Ar/H8oA/7nRH7nRH45w734hH35BH7nRH9nQ8irdHKCnzlYD/7nhD7nRH34xH34hH34xH5xRH/nA6oo1sAr/PEEX/IC3/8nxD7nRH5vhH34xH34hH34xH8mxD2nRUPruNdZbvLCnzVNGH8nw/7nhH34hH34hH6rBH/nA10p4kCru65G4bMB339lhH+nQ7/mw3/mw3/nA3nniMAsPAkk9t9Sqg6lcmapWeoo1qoo1uoo1osrMoAsPAAsvEAr/AAr/MAr/T///9p4zBBAAAAlnRSTlMAAAAAAAAAAAQXGkrFvBO3kYeNjoaOb69SoKGgn8aYtCTFaFhcXE87xYHEAoyiqsGmqquq02J6rKCMRMSEvDBCCwMBRlF/ozfHvpC9XYOdBDLIRXKTvoShBQaehly7kLs5xEsBTMQ5u4TErXhptR+K1Gd4raKBxTy0bD5QO8WBtJqRTNGkn8aYt492PnmOjoaOxb3AvbwcfiH4AAAAAWJLR0SWkWkrOQAAAAd0SU1FB+gEBw0gEjBxa48AAADoSURBVBjTY2BgYOTg5AIDTg5GBiBgZOTm4QUDHm5GkAgjH7+AoJCQkLCIKD8fI0iBmLiEpJS0tIysnLwYUAmjgqKSsoqqqqqauoamlgIjg7aOrp6+gaGRsYmpmbmFpTaDlbWNrZ29g6OTs4urm7uHFYOnl7ePr58/EzNLQGBQcEgoWCAsPIKVLTIqOiY2LhSkJT4hMYk9OSU1LT0j0wpkaFZ2Tm5efkFhUXEJ0FBGBevSsvKKyqrqmtq6TKC1QIfVNzQ2Nbe0trWDHQZ0ekdnV3dPb1//BLDTQZ6bOGnylKlTp0I9h+Z9AOtbM/W05gEGAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTA0LTA3VDEzOjMyOjE4KzAwOjAwBjt1GAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0wNC0wN1QxMzozMjoxOCswMDowMHdmzaQAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII="
+      }
+    },
+    {
+      "name": "VIScon Workshop in English",
+      "locale": "en-GB",
+      "logo": {
+        "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABxVBMVEUAAAAAr+/7nhDCAIr//wD7nRH45g/+bREAr+8Ar+8Ar+8Ar+8Ar/AArvQAr+8Ar/EuucWn0Vml0Vul0Vum0VoruMoAr+8AsPPV5C7+6Qn96Qr96Qr96Ar85Azk3iMDr+4Ar+8AsfBDesrRDnXJFHrJE3rIDn3ssir85A1zxokArvIAr+8AsPAMpunEEX/IDX7HC3/IDX3IDn3IDn3IDn3HC3756A3y4RUKseYAr/AAr+8AsvGGRKPLC3zfT0z6mRTsczG/AJDIDn3IDn3IDH745g/74w4xs8YAr+8AsPAbmeDKDHzIDX78oA77nRH7nhD12Bb34hH41RH/mw0mrM0Ar/H8oA/7nRH7nRH45w734hH35BH7nRH9nQ8irdHKCnzlYD/7nhD7nRH34xH34hH34xH5xRH/nA6oo1sAr/PEEX/IC3/8nxD7nRH5vhH34xH34hH34xH8mxD2nRUPruNdZbvLCnzVNGH8nw/7nhH34hH34hH6rBH/nA10p4kCru65G4bMB339lhH+nQ7/mw3/mw3/nA3nniMAsPAkk9t9Sqg6lcmapWeoo1qoo1uoo1osrMoAsPAAsvEAr/AAr/MAr/T///9p4zBBAAAAlnRSTlMAAAAAAAAAAAQXGkrFvBO3kYeNjoaOb69SoKGgn8aYtCTFaFhcXE87xYHEAoyiqsGmqquq02J6rKCMRMSEvDBCCwMBRlF/ozfHvpC9XYOdBDLIRXKTvoShBQaehly7kLs5xEsBTMQ5u4TErXhptR+K1Gd4raKBxTy0bD5QO8WBtJqRTNGkn8aYt492PnmOjoaOxb3AvbwcfiH4AAAAAWJLR0SWkWkrOQAAAAd0SU1FB+gEBw0gEjBxa48AAADoSURBVBjTY2BgYOTg5AIDTg5GBiBgZOTm4QUDHm5GkAgjH7+AoJCQkLCIKD8fI0iBmLiEpJS0tIysnLwYUAmjgqKSsoqqqqqauoamlgIjg7aOrp6+gaGRsYmpmbmFpTaDlbWNrZ29g6OTs4urm7uHFYOnl7ePr58/EzNLQGBQcEgoWCAsPIKVLTIqOiY2LhSkJT4hMYk9OSU1LT0j0wpkaFZ2Tm5efkFhUXEJ0FBGBevSsvKKyqrqmtq6TKC1QIfVNzQ2Nbe0trWDHQZ0ekdnV3dPb1//BLDTQZ6bOGnylKlTp0I9h+Z9AOtbM/W05gEGAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTA0LTA3VDEzOjMyOjE4KzAwOjAwBjt1GAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0wNC0wN1QxMzozMjoxOCswMDowMHdmzaQAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII="
+      }
+    }
+  ],
+  "batch_credential_issuance": {
+    "batch_size": 10
+  },
+  "credential_configurations_supported": {
+    "visconid-sdjwt": {
+      "format": "vc+sd-jwt",
+      "cryptographic_binding_methods_supported": [
+        "jwk"
+      ],
+      "credential_signing_alg_values_supported": [
+        "ES256"
+      ],
+      "proof_types_supported": {
+        "jwt": {
+          "proof_signing_alg_values_supported": [
+            "ES256"
+          ]
+        }
+      },
+      "display": [
+        {
+          "name": "VIScon-ID",
+          "locale": "de-CH",
+          "logo": {
+            "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAQAAADa613fAAAAt0lEQVR42u3YMQ4BQRiG4a2p3UMi0Wlcih5n2GYTWS6gcBahdZGfSqHZWdNMxvN+/WSe9m8aSZIkSaqiWMYzcV3ZkFWkdgEBAQEBAQEBAQEBAQEBAQEBKQ4S6zi8tx/Y7rM+GfIYfPV70xzIOcppBlIT5AQCAgICApIB6UFAQEBAQDIgx1og89iMWpv8rXtsR25S5jnoWstdCwQEBAQEBAQEBAQEBAQEBOSfIYu4Ja5tJEmSJP3UC98M2ozRcV9yAAAAAElFTkSuQmCC"
+          },
+          "background_color": "#E10A0A"
+        },
+        {
+          "name": "VIScon-ID",
+          "locale": "fr-CH",
+          "logo": {
+            "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAQAAADa613fAAAAt0lEQVR42u3YMQ4BQRiG4a2p3UMi0Wlcih5n2GYTWS6gcBahdZGfSqHZWdNMxvN+/WSe9m8aSZIkSaqiWMYzcV3ZkFWkdgEBAQEBAQEBAQEBAQEBAQEBKQ4S6zi8tx/Y7rM+GfIYfPV70xzIOcppBlIT5AQCAgICApIB6UFAQEBAQDIgx1og89iMWpv8rXtsR25S5jnoWstdCwQEBAQEBAQEBAQEBAQEBOSfIYu4Ja5tJEmSJP3UC98M2ozRcV9yAAAAAElFTkSuQmCC"
+          },
+          "background_color": "#E10A0A"
+        },
+        {
+          "name": "VIScon-ID",
+          "locale": "it-CH",
+          "logo": {
+            "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAQAAADa613fAAAAt0lEQVR42u3YMQ4BQRiG4a2p3UMi0Wlcih5n2GYTWS6gcBahdZGfSqHZWdNMxvN+/WSe9m8aSZIkSaqiWMYzcV3ZkFWkdgEBAQEBAQEBAQEBAQEBAQEBKQ4S6zi8tx/Y7rM+GfIYfPV70xzIOcppBlIT5AQCAgICApIB6UFAQEBAQDIgx1og89iMWpv8rXtsR25S5jnoWstdCwQEBAQEBAQEBAQEBAQEBOSfIYu4Ja5tJEmSJP3UC98M2ozRcV9yAAAAAElFTkSuQmCC"
+          },
+          "background_color": "#E10A0A"
+        },
+        {
+          "name": "VIScon-ID",
+          "locale": "rm-CH",
+          "logo": {
+            "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAQAAADa613fAAAAt0lEQVR42u3YMQ4BQRiG4a2p3UMi0Wlcih5n2GYTWS6gcBahdZGfSqHZWdNMxvN+/WSe9m8aSZIkSaqiWMYzcV3ZkFWkdgEBAQEBAQEBAQEBAQEBAQEBKQ4S6zi8tx/Y7rM+GfIYfPV70xzIOcppBlIT5AQCAgICApIB6UFAQEBAQDIgx1og89iMWpv8rXtsR25S5jnoWstdCwQEBAQEBAQEBAQEBAQEBOSfIYu4Ja5tJEmSJP3UC98M2ozRcV9yAAAAAElFTkSuQmCC"
+          },
+          "background_color": "#E10A0A"
+        },
+        {
+          "name": "VIScon-ID",
+          "locale": "en-GB",
+          "logo": {
+            "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAQAAADa613fAAAAt0lEQVR42u3YMQ4BQRiG4a2p3UMi0Wlcih5n2GYTWS6gcBahdZGfSqHZWdNMxvN+/WSe9m8aSZIkSaqiWMYzcV3ZkFWkdgEBAQEBAQEBAQEBAQEBAQEBKQ4S6zi8tx/Y7rM+GfIYfPV70xzIOcppBlIT5AQCAgICApIB6UFAQEBAQDIgx1og89iMWpv8rXtsR25S5jnoWstdCwQEBAQEBAQEBAQEBAQEBOSfIYu4Ja5tJEmSJP3UC98M2ozRcV9yAAAAAElFTkSuQmCC"
+          },
+          "background_color": "#E10A0A"
+        }
+      ],
+      "vct": "urn:vct:wololo.viscon",
+      "vct_metadata_uri": "${external-url}/oid4vci/vct/my-vct-v01",
+      "vct_metadata_uri#integrity": "sha256-m1Wq7u4HdHzPBSX24+o/JunSu/Y0PCTmOvKL+TQbdFw=",
+      "claims": {
+          "family_name": {
+            "mandatory": true,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Name"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Nom"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Cognome"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Num"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Surname"
+              }
+            ]
+          },
+          "given_name": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Vorname(n)"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Prénom(s)"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Nome(i)"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Prenum(s)"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Given name(s)"
+              }
+            ]
+          },
+          "birth_date": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Geburtsdatum"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Date de naissance"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Data di nascita"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Data di naschientscha"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Date of birth"
+              }
+            ]
+          },
+          "sex": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Geschlecht"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Sexe"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Sesso"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Schlattaina"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Sex"
+              }
+            ]
+          },
+          "place_of_origin": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Heimatort"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Lieu d'origine"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Luogo di attinenza"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Lieu d'origin"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Place of origin"
+              }
+            ]
+          },
+          "birth_place": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Geburtsort"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Lieu de naissance"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Luogo di nascita"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Lieu da naschientscha"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Place of birth"
+              }
+            ]
+          },
+          "nationality": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Nationalität"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Nationalité"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Cittadinanza"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Naziunalitad"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Nationality"
+              }
+            ]
+          },
+          "portrait": {
+            "mandatory": false,
+            "value_type": "image/jpeg",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Gesichtsbild"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Image faciale"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Immagine facciale"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Fotografia da fatscha"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Face image"
+              }
+            ]
+          },
+          "personal_administrative_number": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "AHV-Nummer"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Numéro AVS"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Numero AVS"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Numer da l'AVS"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Insurance Number"
+              }
+            ]
+          },
+          "additional_person_info": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Zusätzliche Angaben zur Person"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Mentions supplémentaires concernant la personne"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Informazioni supplementari sulla persona"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Indicaziuns supplementaras per la persuna"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Additional information about the person"
+              }
+            ]
+          },
+          "age_over_16": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Alter über 16 Jahre"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Age de plus de 16 ans"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Età superiore a 16 anni"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Dapli che 16 onns"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Over the age of 16"
+              }
+            ]
+          },
+          "age_over_18": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Alter über 18 Jahre"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Age de plus de 18 ans"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Età superiore a 18 anni"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Dapli che 18 onns"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Over the age of 18"
+              }
+            ]
+          },
+          "age_over_65": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Alter über 65 Jahre"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Age de plus de 65 ans"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Età superiore a 65 anni"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Dapli che 65 onns"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Over the age of 65"
+              }
+            ]
+          },
+          "age_birth_year": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Jahrgang"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Né(e) en"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Annata"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Onnada"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Born in"
+              }
+            ]
+          },
+          "document_number": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "VIScon-ID-Nummer"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Numéro de VIScon-ID"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Numero di VIScon-ID"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Numer VIScon-ID"
+              },
+              {
+                "locale": "en-GB",
+                "name": "VIScon-ID number"
+              }
+            ]
+          },
+          "issuance_date": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Ausgestellt am"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Délivré le"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Rilasciato il"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Emess ils"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Date of issue"
+              }
+            ]
+          },
+          "expiry_date": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Gültig bis"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Date d'expiration"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Data di scadenza"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Data di scadenza"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Date of expiry"
+              }
+            ]
+          },
+          "reference_id_type": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Ausweistyp"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Type de document d’identité"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Tipo di documento"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Tip dal document"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Identification type"
+              }
+            ]
+          },
+          "reference_id_expiry_date": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Ablaufdatum des Ausweises"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Date d’expiration du document"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Data di scadenza del documento"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Data da scadenza dal document"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Identification date of expiry"
+              }
+            ]
+          },
+          "verification_type": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Identitätsprüfungsart"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Processus de vérification d'identité"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Procedura di verifica del'identità"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Process da verificaziun d'identitad"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Identity verification process"
+              }
+            ]
+          },
+          "verification_organization": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Identitätsprüfung durch"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Processus de vérification d'identité par"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Procedura di verifica del'identità tramite"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Process da verificaziun tras"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Identity verification by"
+              }
+            ]
+          },
+          "issuing_authority": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Ausgabestelle"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Autorité de délivrance"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Autorità di emissione"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Autorità da emission"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Issuing authority"
+              }
+            ]
+          },
+          "issuing_country": {
+            "mandatory": false,
+            "value_type": "string",
+            "display": [
+              {
+                "locale": "de-CH",
+                "name": "Ausstellungsland"
+              },
+              {
+                "locale": "fr-CH",
+                "name": "Pays d'émission"
+              },
+              {
+                "locale": "it-CH",
+                "name": "Paese di emissione"
+              },
+              {
+                "locale": "rm-CH",
+                "name": "Plea da emission"
+              },
+              {
+                "locale": "en-GB",
+                "name": "Issuing country"
+              }
+            ]
+          }
+        }
+      ,
+      "order": [
+        "document_number",
+        "portrait",
+        "family_name",
+        "given_name",
+        "birth_date",
+        "sex",
+        "place_of_origin",
+        "birth_place",
+        "nationality",
+        "personal_administrative_number",
+        "additional_person_info",
+        "age_over_16",
+        "age_over_18",
+        "age_over_65",
+        "age_birth_year",
+        "issuance_date",
+        "expiry_date",
+        "reference_id_type",
+        "reference_id_expiry_date",
+        "verification_type",
+        "verification_organization",
+        "issuing_authority",
+        "issuing_country"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+--- a/verifier-application/src/main/resources/bootstrap.yml
++++ b/verifier-application/src/main/resources/bootstrap.yml
+@@ -3,7 +3,7 @@
+ # SPDX-License-Identifier: MIT
+ 
+ server:
+-  port: 8080
++  port: 8081
+ spring:
+   docker:
+     compose:

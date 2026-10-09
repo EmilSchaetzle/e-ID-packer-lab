@@ -1,0 +1,23 @@
+{
+    "folders": [
+        {
+            "name": "Issuer",
+            "path": "swiyu-issuer"
+        },
+        {
+            "name": "Verifier",
+            "path": "swiyu-verifier"
+        }
+    ],
+    "settings": {
+        "[java]": {
+            "editor.insertSpaces": true,
+            "editor.rulers": [
+                120
+            ],
+            "editor.tabSize": 4,
+            "editor.wordWrapColumn": 120
+        },
+        "java.compile.nullAnalysis.mode": "automatic"
+    }
+}

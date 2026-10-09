@@ -1,0 +1,62 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name viscon.swiyu;
+
+    return 302 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    ssl_certificate /etc/ssl/certs/nginx-selfsigned.crt;
+    ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
+
+    server_name viscon.swiyu;
+
+	# Static files
+    location /static/ {
+        root /var/www/html;
+    }
+
+	# Issuer
+    location /issuer/ {
+        proxy_pass http://localhost:8080/;
+    }
+
+    location /.well-known/openid-credential-issuer {
+        proxy_pass http://localhost:8080/.well-known/openid-credential-issuer;
+    }
+    location ~ "/.well-known/(openid-credential-issuer|oauth-authorization-server)/issuer/([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12})" {
+        proxy_pass http://localhost:8080/.well-known/$1/$2;
+    }
+
+    location /.well-known/openid-configuration {
+        proxy_pass http://localhost:8080/.well-known/openid-configuration;
+    }
+
+    location /oid4vci/ {
+        proxy_pass http://localhost:8080 ;
+    }
+
+	# Verifier
+    location /verifier/ {
+        proxy_pass http://localhost:8081/;
+    }
+
+    location /oid4vp/ {
+        proxy_pass http://localhost:8081 ;
+    }
+}
+
+# intermediate configuration
+ssl_protocols TLSv1.2 TLSv1.3;
+ssl_ecdh_curve X25519:prime256v1:secp384r1;
+ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-CHACHA20-POLY1305;
+ssl_prefer_server_ciphers off;
+
+# see also ssl_session_ticket_key alternative to stateful session cache
+ssl_session_timeout 1d;
+ssl_session_cache shared:MozSSL:10m;  # about 40000 sessions

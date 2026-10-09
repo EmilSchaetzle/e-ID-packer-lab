@@ -1,0 +1,12 @@
+//
+// Do any local configuration here
+//
+zone "viscon.swiyu" {
+        type master;
+        file "/etc/bind/zones/db.viscon.swiyu";
+};
+
+zone "mallory.swiyu" {
+        type master;
+        file "/etc/bind/zones/db.mallory.swiyu";
+};

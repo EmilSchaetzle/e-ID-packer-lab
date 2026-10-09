@@ -1,0 +1,16 @@
+$ORIGIN viscon.swiyu.
+$TTL 1h
+
+@               SOA     ns1 hostmaster (
+                                2018111111 ; Serial
+                                8h         ; Refresh
+                                30m        ; Retry
+                                1w         ; Expire
+                                1h )       ; Negative Cache TTL
+                NS      ns1
+
+@               A       {{REPLACE_ME}}
+
+www             A       {{REPLACE_ME}}
+
+ns1             A       {{REPLACE_ME}}
