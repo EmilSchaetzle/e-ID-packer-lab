@@ -1,0 +1,37 @@
+{
+  "accepted_issuer_dids": [ "did:webvh:QmdZaoCtZhpvocspJRbnsNRbqfMcu2xWds6X9P2GwiKDW2:viscon.swiyu:static:issuer" ],
+  "jwt_secured_authorization_request": true,
+  "response_mode": "direct_post.jwt",
+"verification_purpose": {
+    "scope": "com.example.age_verification",
+    "purpose_name": {
+      "default": "Age Verification",
+      "de-ch": "Altersverifikation"
+    },
+    "purpose_description": {
+      "default": "Age Verification required for xyz"
+    }
+  },
+  "dcql_query": {
+    "credentials": [
+      {
+        "id": "identity_credential_dcql",
+        "format": "vc+sd-jwt",
+        "meta": {
+          "vct_values": [
+            "urn:vct:wololo.viscon"
+          ]
+        },
+        "claims": [
+          {
+            "path": [
+              "family_name"
+            ]
+          }
+        ],
+        "require_cryptographic_holder_binding": false
+      }
+    ]
+  },
+  "configuration_override": {}
+}

@@ -11,7 +11,7 @@
       "rendering": {
         "oca": {
           "uri": "${external-url}/oid4vci/oca/my-overlay-v01",
-          "uri#integrity": "sha256-mZVY/2gnijQxKG3WQNalEWZWlmg5TUHGOV5+wzwlJmE="
+          "uri#integrity": "sha256-i0BDo5K3LT27gIl6qY7RU8KeeJ3mYt3moel9qcJmTCo="
         }
       }
     },
@@ -21,7 +21,7 @@
       "rendering": {
         "oca": {
           "uri": "${external-url}/oid4vci/oca/my-overlay-v01",
-          "uri#integrity": "sha256-mZVY/2gnijQxKG3WQNalEWZWlmg5TUHGOV5+wzwlJmE="
+          "uri#integrity": "sha256-i0BDo5K3LT27gIl6qY7RU8KeeJ3mYt3moel9qcJmTCo="
         }
       }
     },
@@ -31,7 +31,7 @@
       "rendering": {
         "oca": {
           "uri": "${external-url}/oid4vci/oca/my-overlay-v01",
-          "uri#integrity": "sha256-mZVY/2gnijQxKG3WQNalEWZWlmg5TUHGOV5+wzwlJmE="
+          "uri#integrity": "sha256-i0BDo5K3LT27gIl6qY7RU8KeeJ3mYt3moel9qcJmTCo="
         }
       }
     },
@@ -41,7 +41,7 @@
       "rendering": {
         "oca": {
           "uri": "${external-url}/oid4vci/oca/my-overlay-v01",
-          "uri#integrity": "sha256-mZVY/2gnijQxKG3WQNalEWZWlmg5TUHGOV5+wzwlJmE="
+          "uri#integrity": "sha256-i0BDo5K3LT27gIl6qY7RU8KeeJ3mYt3moel9qcJmTCo="
         }
       }
     },
@@ -51,7 +51,7 @@
       "rendering": {
         "oca": {
           "uri": "${external-url}/oid4vci/oca/my-overlay-v01",
-          "uri#integrity": "sha256-mZVY/2gnijQxKG3WQNalEWZWlmg5TUHGOV5+wzwlJmE="
+          "uri#integrity": "sha256-i0BDo5K3LT27gIl6qY7RU8KeeJ3mYt3moel9qcJmTCo="
         }
       }
     }
