@@ -15,25 +15,17 @@ On GNU/Linux you can build and run the VM with QEMU/KVM instead, no VMware accou
 
 1. Install QEMU (`apt install qemu-system-x86 qemu-utils`) and make sure your user can access `/dev/kvm`
 2. Set `hypervisor = "qemu"` in `variables.auto.pkrvars.hcl` and run `run.sh`. The image ends up in `output-eID/eID_testlab.qcow2`
-3. Start the VM with `start-vm.sh`. It runs on a copy-on-write overlay (`output-eID/eID_testlab-run.qcow2`), so you can delete the overlay to go back to the freshly built VM
+3. Start the VM with `start-qemu.sh`. It runs on a copy-on-write overlay (`output-eID/eID_testlab-run.qcow2`), so you can delete the overlay to go back to the freshly built VM
 
-The VM uses QEMU's user-mode networking, so it's not reachable by its own IP. Instead, `start-vm.sh` forwards SSH to `127.0.0.1:2222` and HTTPS to `127.0.0.1:443`. Binding port 443 as a normal user needs:
+The VM uses QEMU's user-mode networking, so it's not reachable by its own IP. Instead, `start-qemu.sh` forwards SSH to `127.0.0.1:2222` and HTTPS to `127.0.0.1:8443`. Since all DIDs reference https://viscon.swiyu (port :443 is implicit), you can either change all DIDs (and recalculate the integrity hashes) or add a redirector from 127.1:443 to 127.1:8443 (which would need sudo):
 
 ```
-sudo sysctl net.ipv4.ip_unprivileged_port_start=443
+sudo socat TCP-LISTEN:443,bind=127.0.0.1,reuseaddr,fork TCP:127.0.0.1:8443
 ```
 
-(this resets on reboot). Then, in Burp's DNS override, point `viscon.swiyu` to `127.0.0.1`.
+Then, in Burp's DNS override, point `viscon.swiyu` to `127.0.0.1`.
 
 Bridged networking is not needed: Burp runs on the host, and both the emulator and a physical phone (via `adb reverse`) send their traffic through Burp.
-
-# Slides errata
-
-- Slide 38 ("Custom cert pinning"): the network security config is `network_security_config.xml` in this repo. To download it into the wallet:
-  ```
-  curl -o app/src/abn/res/xml/network_security_config.xml https://raw.githubusercontent.com/Foo-Manroot/e-ID-packer-lab/main/network_security_config.xml
-  ```
-- Slide 41 ("Going through Burp"): with a physical device, the port forwarded with `adb reverse` must match the proxy port set on the phone. Use `adb reverse tcp:8080 tcp:8080`, then proxy `127.0.0.1:8080` (or `adb shell settings put global http_proxy 127.0.0.1:8080`, and `adb shell settings put global http_proxy :0` to undo it)
 
 # Development
 

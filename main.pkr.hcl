@@ -151,7 +151,7 @@ source "qemu" "eID" {
 	communicator = "ssh"
 	ssh_username = "lab-user"
 	ssh_password = var.user_pass
-	ssh_timeout = "20m"
+	ssh_timeout = "40m"
 
 	shutdown_command = "echo ${var.user_pass} | sudo -S /sbin/shutdown -h now"
 
